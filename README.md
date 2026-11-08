@@ -1,46 +1,85 @@
-# Alloydb Basics
+# claude-alloydb-basics-skill
+
+A Claude Code skill for working with AlloyDB for PostgreSQL, including cluster operations, client integration, infrastructure, IAM, and AI-oriented database capabilities.
 
 ## Overview
 
-This repository provides a Claude skill focused on alloydb basics. It offers structured domain guidance and a reusable workflow for working with the subject in a clear, consistent way.
+AlloyDB is a managed PostgreSQL-compatible database service. This skill helps developers understand its core architecture, provision and operate database resources, connect applications, configure access, and evaluate database features for AI applications.
 
-## Scope
+## Main Capabilities
 
-- Introduces the relevant concepts and terminology.
-- Describes practical workflows and recommended approaches.
-- Helps organize inputs, analysis, and expected outputs.
-- Retains the original supporting files included with the skill.
+- Understand AlloyDB clusters, instances, and backups.
+- Use command-line workflows for database administration.
+- Connect applications through supported client libraries.
+- Define infrastructure and configuration.
+- Configure IAM and database security.
+- Work with AlloyDB MCP integrations.
+- Explore vector and hybrid search capabilities.
+- Plan backups and operational recovery.
+- Review performance and availability considerations.
 
-## Repository Structure
+## Installation
 
-```text
-SKILL.md
-references/cli-usage.md
-references/client-library-usage.md
-references/core-concepts.md
-references/iac-usage.md
-references/iam-security.md
-references/mcp-usage.md
+Install the skill in the Claude Code skills directory:
+
+```bash
+git clone https://github.com/Brajesh31/claude-alloydb-basics-skill.git ~/.claude/skills/alloydb-basics
 ```
 
-## Requirements
+Database administration commands require a configured cloud environment, suitable project permissions, and access to the target AlloyDB resources.
 
-- A Claude-compatible environment that supports skills.
-- Relevant technical or scientific context for the task.
-- Access to required databases, tools, or services when the workflow calls for them.
+## Usage
 
-## Getting Started
+Invoke the skill for AlloyDB tasks:
 
-1. Review `SKILL.md` for the full instructions and scope.
-2. Install this skill in your Claude environment's supported skills directory.
-3. Provide a task with clear objectives and relevant context.
-4. Follow the workflow described by the skill.
-5. Validate data, assumptions, and outputs before using them in downstream work.
+```text
+/alloydb-basics
+```
 
-## Responsible Use
+Provide the cloud project, region, cluster or instance identifier, intended operation, and relevant security or availability constraints. Do not include credentials in prompts.
 
-Check current documentation for external systems and verify important results independently. Do not treat generated analysis as a replacement for expert review in high-impact scientific or database operations.
+## Reference Guide
 
-## License
+| File | Focus |
+|---|---|
+| `references/core-concepts.md` | Clusters, instances, and database architecture |
+| `references/cli-usage.md` | Command-line administration |
+| `references/client-library-usage.md` | Application connectivity |
+| `references/iac-usage.md` | Infrastructure as code |
+| `references/iam-security.md` | Identity, permissions, and security |
+| `references/mcp-usage.md` | MCP-based database workflows |
 
-MIT. See [LICENSE](LICENSE).
+## Recommended Workflow
+
+1. Confirm the cloud project and target environment.
+2. Inspect existing clusters and instances before making changes.
+3. Review networking, identity, and access requirements.
+4. Choose a suitable client connection method.
+5. Plan backups and recovery before modifying production resources.
+6. Apply infrastructure changes through a repeatable process.
+7. Validate connectivity and database behavior.
+8. Monitor performance, availability, and operational events.
+
+## Security Checklist
+
+- Use least-privilege IAM roles.
+- Keep credentials in secure secret storage.
+- Restrict network access to approved clients.
+- Separate development, staging, and production environments.
+- Confirm backup and restore procedures.
+- Audit privileged operations.
+- Avoid exposing database connection strings in logs.
+
+## Repository Contents
+
+- `SKILL.md`: Main AlloyDB workflow and operating instructions.
+- `references/`: Core concepts, CLI, client libraries, infrastructure, IAM, and MCP guidance.
+- `README.md`: Setup, usage, and operational checklist.
+
+## AI and Vector Workloads
+
+For AI-oriented applications, assess vector search, hybrid retrieval, and model integration against the actual data and query requirements. Validate index design, retrieval quality, latency, and cost before adopting a production architecture.
+
+## Operational Caution
+
+Database changes can affect availability and data integrity. Confirm the target environment, understand the operation's impact, and ensure recovery options are available before making destructive changes.
