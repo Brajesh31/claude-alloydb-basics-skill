@@ -84,7 +84,6 @@ For AI-oriented applications, assess vector search, hybrid retrieval, and model 
 
 Database changes can affect availability and data integrity. Confirm the target environment, understand the operation's impact, and ensure recovery options are available before making destructive changes.
 
-
 ## Supporting Resources
 
 | File | Purpose |
@@ -94,7 +93,3 @@ Database changes can affect availability and data integrity. Confirm the target 
 | [Vector search evaluation template](resources/vector-search-evaluation-template.md) | Evaluate embedding consistency, retrieval quality, filters, latency, and operations. |
 
 The six existing reference files under references/ are retained. They cover core concepts, CLI use, client libraries, infrastructure as code, IAM/security, and MCP. Use current Google Cloud documentation to verify command flags, supported regions, IAM roles, connector behavior, feature availability, and pricing before making changes.
-
-## Upstream source and license
-
-The unchanged SKILL.md metadata identifies Google skills as the source and Apache 2.0 as the upstream license. The single root LICENSE is retained as requested for this repository; it does not replace the upstream terms for copied skill content. Review the upstream source terms before redistributing that content.
